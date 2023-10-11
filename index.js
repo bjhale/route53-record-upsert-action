@@ -22,11 +22,14 @@ try {
             {
               Value: value
             }
-          ]
+          ],
+          AliasTarget: null
         }
       ]
     }
-  }
+  };
+
+  console.log(input);
 
   const command = new ChangeResourceRecordSetsCommand(input);
   const response = await client.send(command);
