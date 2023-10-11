@@ -1,0 +1,22 @@
+name: 'Route53 Record Upsert'
+description: 'Updates or Creates a simple Route53 record'
+inputs:
+  route53_zone_id:
+    description: 'Route53 Zone ID'
+    required: true
+  record_name:
+    description: 'Name or FQDN of the record'
+    required: true
+  record_type:
+    description: 'Type of the record'
+    required: true
+  record_value:
+    description: 'Value of the record'
+    required: true
+  record_ttl:
+    description: 'TTL of the record'
+    required: false
+    default: "300"
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
