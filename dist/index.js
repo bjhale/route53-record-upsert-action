@@ -57256,7 +57256,7 @@ try {
     }
   };
 
-  console.log(input);
+  console.log(JSON.stringify(input));
 
   const command = new _aws_sdk_client_route_53__WEBPACK_IMPORTED_MODULE_1__.ChangeResourceRecordSetsCommand(input);
   const response = await client.send(command);

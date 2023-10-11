@@ -30,7 +30,7 @@ try {
     }
   };
 
-  console.log(input);
+  console.log(JSON.stringify(input));
 
   const command = new ChangeResourceRecordSetsCommand(input);
   const response = await client.send(command);
