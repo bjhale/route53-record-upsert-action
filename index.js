@@ -15,15 +15,16 @@ try {
       Changes: [
         {
           Action: 'UPSERT',
-          Name: name,
-          Type: type,
-          TTL: ttl,
-          ResourceRecords: [
-            {
-              Value: value
-            }
-          ],
-          AliasTarget: null
+          ResourceRecordSet: {
+            Name: name,
+            Type: type,
+            TTL: ttl,
+            ResourceRecords: [
+              {
+                Value: value
+              }
+            ]
+          }
         }
       ]
     }
