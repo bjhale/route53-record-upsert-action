@@ -1,5 +1,8 @@
 name: 'Route53 Record Upsert'
 description: 'Updates or creates a simple Route53 DNS record.'
+branding:
+  icon: 'arrow-up-circle'
+  color: 'orange'
 inputs:
   route53_zone_id:
     description: 'Route53 Zone ID'

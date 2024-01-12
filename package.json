@@ -10,8 +10,8 @@
     "build": "npx action-docs --update-readme && ncc build index.js -o dist"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Billy Hale <bjhale@gmail.com>",
+  "license": "MIT",
   "volta": {
     "node": "20.8.0"
   },
