@@ -1,5 +1,5 @@
 name: 'Route53 Record Upsert'
-description: 'Updates or Creates a simple Route53 record'
+description: 'Updates or creates a simple Route53 DNS record.'
 inputs:
   route53_zone_id:
     description: 'Route53 Zone ID'

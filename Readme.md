@@ -1,36 +1,37 @@
-# Route53 Record Upsert
+# Route53 Record Upsert Action
 
-This GitHub Action updates or creates a simple Route53 record.
+<!-- action-docs-description -->
+## Description
 
+Updates or creates a simple Route53 DNS record.
+<!-- action-docs-description -->
+
+## Prerequisites
+
+To use this action, you first need to configure AWS credentials and set the AWS Region in your GitHub environment by using the configure-aws-credentials step.  Follow the instructions in [Configure AWS Credentials Action for GitHub Actions](https://github.com/aws-actions/configure-aws-credentials) to Assume a role directly using GitHub OIDC provider.
+
+The IAM role the action assumes must have the following permissions:
+
+`route53:ChangeResourceRecordSets` on the zone you want to add/change records.
+
+<!-- action-docs-inputs -->
 ## Inputs
 
-### `route53_zone_id`
+| parameter | description | required | default |
+| --- | --- | --- | --- |
+| route53_zone_id | Route53 Zone ID | `true` |  |
+| record_name | Name or FQDN of the record | `true` |  |
+| record_type | Type of the record | `true` |  |
+| record_value | Value of the record | `true` |  |
+| record_ttl | TTL of the record | `false` | 300 |
+<!-- action-docs-inputs -->
 
-**Required** The ID of the Route53 zone.
+<!-- action-docs-outputs -->
 
-### `record_name`
+<!-- action-docs-outputs -->
 
-**Required** The name or FQDN of the record.
+<!-- action-docs-runs -->
+## Runs
 
-### `record_type`
-
-**Required** The type of the record.
-
-### `record_value`
-
-**Required** The value of the record.
-
-### `record_ttl`
-
-The TTL of the record. Default: `"300"`
-
-## Example usage
-
-```yaml
-uses: actions/route53-record-upsert@v1
-with:
-  route53_zone_id: '1234567890'
-  record_name: 'example.com'
-  record_type: 'A'
-  record_value: '192.0.2.1'
-  record_ttl: '3600'
+This action is a `node20` action.
+<!-- action-docs-runs -->
